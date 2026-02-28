@@ -47,7 +47,7 @@
             :aria-pressed="variant === 'desktop'"
             @click="variant = 'desktop'"
         >
-            Desktop Preview
+            電腦預覽
         </button>
 
         <button
@@ -59,7 +59,7 @@
             :aria-pressed="variant === 'mobile'"
             @click="variant = 'mobile'"
         >
-            Mobile Preview
+            手機預覽
         </button>
     </div>
 
@@ -67,7 +67,7 @@
         <div class="space-y-3">
             <div class="flex flex-wrap items-center justify-between gap-2">
                 <p class="text-xs text-gray-600 dark:text-gray-300">
-                    Live preview is rendered from layout skeleton data.
+                    使用測試資料預覽呈現樣式。
                 </p>
                 <a
                     x-show="previewUrl()"
@@ -76,7 +76,7 @@
                     rel="noopener noreferrer"
                     class="inline-flex items-center rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-xs font-medium text-gray-700 transition hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-200 dark:hover:bg-gray-800"
                 >
-                    Open Preview
+                    開啟預覽
                 </a>
             </div>
 
@@ -84,7 +84,7 @@
                 <iframe
                     class="h-[420px] w-full bg-white dark:bg-gray-900"
                     :src="previewUrl()"
-                    title="Campaign layout live preview"
+                    title="活動版型即時預覽"
                     loading="lazy"
                     x-on:load="iframeFailed = false"
                     x-on:error="iframeFailed = true"
@@ -92,7 +92,7 @@
             </div>
 
             <div x-show="iframeFailed" class="rounded-lg border border-amber-300 bg-amber-50 px-3 py-2 text-xs text-amber-900 dark:border-amber-500/40 dark:bg-amber-500/10 dark:text-amber-200">
-                Live preview failed. Falling back to static image.
+                即時預覽失敗，改用靜態圖片顯示。
             </div>
 
             <img
@@ -101,18 +101,18 @@
                 loading="lazy"
                 decoding="async"
                 :src="`${base}/${slugMap[type]}${variant === 'mobile' ? '-mobile' : ''}.webp`"
-                :alt="`${slugMap[type]} fallback preview`"
+                :alt="`${slugMap[type]} 靜態備援預覽`"
                 x-on:error="
                     $event.target.onerror = null;
                     $event.target.src = fallback;
                 "
             >
             <div class="mt-2 text-xs text-gray-600 dark:text-gray-300"
-                 x-text="`Static image: ${slugMap[type]}${variant === 'mobile' ? '-mobile' : ''}.webp`"></div>
+                 x-text="`靜態圖片：${slugMap[type]}${variant === 'mobile' ? '-mobile' : ''}.webp`"></div>
         </div>
     </template>
 
     <div x-show="!type || !slugMap[type]" class="text-sm text-gray-600 dark:text-gray-300">
-        Please choose a layout type.
+        請先選擇版型。
     </div>
 </div>
