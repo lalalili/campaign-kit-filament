@@ -11,6 +11,11 @@
         "illuminate/support": "^12.0",
         "lalalili/campaign-kit": "^0.1"
     },
+    "require-dev": {
+        "pestphp/pest": "^4.0",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^12.0"
+    },
     "autoload": {
         "psr-4": {
             "Lalalili\\CampaignKitFilament\\": "src/"
@@ -21,6 +26,15 @@
             "providers": [
                 "Lalalili\\CampaignKitFilament\\CampaignKitFilamentServiceProvider"
             ]
+        }
+    },
+    "scripts": {
+        "test": "pest --compact",
+        "analyse": "phpstan analyse --configuration=phpstan.neon.dist --no-progress"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
         }
     }
 }
