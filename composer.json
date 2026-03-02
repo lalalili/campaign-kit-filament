@@ -3,7 +3,6 @@
     "description": "Optional Filament integration for lalalili/campaign-kit.",
     "type": "library",
     "license": "proprietary",
-    "version": "0.1.0",
     "require": {
         "php": "^8.4",
         "filament/forms": "^4.0",
