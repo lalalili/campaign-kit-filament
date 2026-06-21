@@ -11,10 +11,18 @@
         "lalalili/campaign-kit": "^0.1"
     },
     "require-dev": {
+        "larastan/larastan": "^3.0",
+        "orchestra/testbench": "^10.0 || ^11.0",
         "pestphp/pest": "^4.0",
         "phpstan/phpstan": "^2.1",
         "phpunit/phpunit": "^12.0"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/lalalili/campaign-kit.git"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Lalalili\\CampaignKitFilament\\": "src/"
