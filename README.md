@@ -20,7 +20,7 @@ Out of package scope:
 
 - PHP `^8.4`
 - Laravel `^12.0`
-- Filament `^4.0` (`forms` + `schemas`)
+- Filament `^4.0 || ^5.0` (`forms` + `schemas`)
 - `lalalili/campaign-kit` `^0.1`
 
 ## Install
