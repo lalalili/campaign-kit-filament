@@ -2,7 +2,7 @@
     "name": "lalalili/campaign-kit-filament",
     "description": "Optional Filament integration for lalalili/campaign-kit.",
     "type": "library",
-    "license": "proprietary",
+    "license": "MIT",
     "require": {
         "php": "^8.4",
         "filament/forms": "^4.0 || ^5.0",
