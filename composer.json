@@ -12,6 +12,7 @@
     },
     "require-dev": {
         "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.0",
         "orchestra/testbench": "^10.0 || ^11.0",
         "pestphp/pest": "^5.0",
         "pestphp/pest-plugin-phpstan": "^5.0",
@@ -41,7 +42,8 @@
     },
     "scripts": {
         "test": "pest --compact",
-        "analyse": "phpstan analyse --configuration=phpstan.neon.dist --no-progress"
+        "analyse": "phpstan analyse --configuration=phpstan.neon.dist --no-progress",
+        "format": "pint"
     },
     "config": {
         "allow-plugins": {
