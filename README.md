@@ -21,7 +21,7 @@ Out of package scope:
 - PHP `^8.4`
 - Laravel `^12.0`
 - Filament `^4.0 || ^5.0` (`forms` + `schemas`)
-- `lalalili/campaign-kit` `^0.1`
+- `lalalili/campaign-kit` `^1.0`
 
 ## Install
 
@@ -41,7 +41,7 @@ In app `composer.json`:
     }
   ],
   "require": {
-    "lalalili/campaign-kit-filament": "^0.1"
+    "lalalili/campaign-kit-filament": "^1.0"
   }
 }
 ```
@@ -65,7 +65,7 @@ In app `composer.json`:
     }
   ],
   "require": {
-    "lalalili/campaign-kit-filament": "^0.1"
+    "lalalili/campaign-kit-filament": "^1.0"
   }
 }
 ```
@@ -114,4 +114,3 @@ composer install
 composer test
 composer analyse
 ```
-
